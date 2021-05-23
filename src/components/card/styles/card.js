@@ -74,9 +74,9 @@ export const Meta = styled.div`
 
 export const Image = styled.img`
     border: 0;
-    width: 305px;
     cursor: pointer;
-    height: 405px;
+    width: 355px;
+    height: 400px;
     padding: 0;
     margin: 0;
 `;
@@ -88,13 +88,12 @@ export const Item = styled.div`
     position: relative;
     cursor: pointer;
     transition: transform 0.2;
-    
-    &:hover {
-        transform: scale(1.3);
-        z-index: 99;
-    }
-    
+        
     @media (min-width: 1000px) {
+        &:hover {
+            transform: scale(1.3);
+            z-index: 99;
+        }
         &:hover ${Meta}, &:hover ${Text}, &:hover ${SubTitle} {
             display: block;
             z-index: 100;
@@ -131,6 +130,7 @@ export const FeatureText = styled.p`
 export const Feature = styled.div`
     display: flex;
     flex-direction: row;
+    width: 100%;
     background: url(${({ src }) => src});
     background-size: 40% 100%;
     position: relative;
