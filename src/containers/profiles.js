@@ -14,7 +14,7 @@ export function SelectProfileContainer({ user, setProfile }) {
                     />
                 </Header.Frame>
             </Header>
-            <Profiles>
+            {user && <Profiles>
                 <Profiles.Title>Who's watching?</Profiles.Title>
                 <Profiles.List>
                     <Profiles.User
@@ -27,7 +27,7 @@ export function SelectProfileContainer({ user, setProfile }) {
                         <Profiles.Name>{user.displayName}</Profiles.Name>
                     </Profiles.User>
                 </Profiles.List>
-            </Profiles>
+            </Profiles>}
         </>
     )
 }
