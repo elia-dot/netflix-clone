@@ -62,6 +62,10 @@ export const Text = styled.p`
 export const Entities = styled.div`
     display: flex;
     flex-direction: row;
+    @media (max-width: 600px){
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const Meta = styled.div`
@@ -79,6 +83,10 @@ export const Image = styled.img`
     height: 400px;
     padding: 0;
     margin: 0;
+
+    @media (max-width: 600px){
+        margin: 1em auto;
+    }
 `;
 
 export const Item = styled.div`
@@ -104,7 +112,7 @@ export const Item = styled.div`
         margin-left: 56px;
         
         @media (max-width: 1000px) {
-            margin-left: 30px;
+            margin-left: 0;
         }
     }
     
@@ -112,7 +120,7 @@ export const Item = styled.div`
         margin-right: 56px;
         
         @media (max-width: 1000px) {
-            margin-right: 30px;
+            margin-right: 0;
         }
     }
 `;
@@ -139,7 +147,13 @@ export const Feature = styled.div`
     background-position-x: right;
     background-repeat: no-repeat;
     background-color: black;
-    
+
+    @media (max-width: 600px){
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        background: black;
+    }
     @media (max-width: 1000px) {
         height: auto;
         background-size: auto;
