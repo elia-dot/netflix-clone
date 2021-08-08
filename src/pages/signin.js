@@ -23,8 +23,8 @@ export default function Signin() {
       .auth()
       .signInWithEmailAndPassword(emailAddress, password)
       .then(() => {
-        setEmailAddress("");
-        setPassword("");
+        setEmailAddress("guest@test.com");
+        setPassword("123456");
         setError("");
         history.push(ROUTES.BROWSE);
       })
